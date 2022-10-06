@@ -26,7 +26,7 @@ resource "aws_instance" "ansible-ec2" {
             type     = "ssh"
             user     = "ubuntu"
             # key pair should be created manually and saved in location where this resource is created
-            private_key= file("./jenkins-terraform.pem")
+            #private_key= file("./jenkins-terraform.pem") # commented to use pem ssh from jenkins ssh plugin 
             host     = self.public_ip
         }
 
